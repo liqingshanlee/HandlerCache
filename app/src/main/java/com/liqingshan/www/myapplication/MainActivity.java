@@ -1,5 +1,6 @@
 package com.liqingshan.www.myapplication;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +13,12 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mButton;
     private ProgressBar mProgressbar;
-    private TextView mTextView, mTextView1;
+    private TextView mTextView, mTextView1, textview3;
     private Bean mBean = new Bean();
     int i = 0;
-    int timer =0;
+    int timer = 0;
     protected int splashTime = 3000;
-    String[] name = {"A","N","D","R","O","I","D"};
+    String[] name = {"A", "N", "D", "R", "O", "I", "D"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mProgressbar = (ProgressBar) findViewById(R.id.progress_bar);
         mTextView = (TextView) findViewById(R.id.textview1);
         mTextView1 = (TextView) findViewById(R.id.textview2);
+        textview3 = (TextView) findViewById(R.id.textview3);
+        textview3.setOnClickListener(this);
         mTextView1.setOnClickListener(this);
         mButton.setOnClickListener(this);
     }
@@ -41,32 +44,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.textview2:
                 initMianUi();
                 break;
+            case R.id.textview3:
+                startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                break;
         }
 
     }
 
     //更新主界面
     void initMianUi() {
-        Thread th=new Thread(){
+        Thread th = new Thread() {
 
             @Override
-            public void run(){
-                try
-                {
-                    for (timer = 0; timer < 7; timer++)
-                    {
+            public void run() {
+                try {
+                    for (timer = 0; timer < 7; timer++) {
                         int waited = 0;
-                        while(waited < splashTime)
-                        {
+                        while (waited < splashTime) {
                             Thread.sleep(100);
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
                                     try {
                                         mTextView1.setText(name[timer]);
-                                    }
-                                    catch(Exception e)
-                                    {
+                                    } catch (Exception e) {
                                         e.printStackTrace();
                                     }
                                 }
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             waited += 100;
                         }
                     }
-                }catch (InterruptedException e) {
+                } catch (InterruptedException e) {
                 }
 
             }
