@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //显示进度条
             mProgressbar.setProgress(msg.arg1);
             //重新把进程加入到进程队列中
-            mProgressbar.post(update_thread);
+            mHandler.post(update_thread);
         }
     };//不加这
 }
