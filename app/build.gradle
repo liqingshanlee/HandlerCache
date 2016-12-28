@@ -24,10 +24,10 @@ android {
         oppo {} //oppo
         samsung {} //三星
     }
-
     productFlavors.all {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
+
 
     //定义signingConfig.release 添加我们的签名文件配置
     signingConfigs {
@@ -74,5 +74,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.umeng.analytics:analytics:latest.integration'
     testCompile 'junit:junit:4.12'
 }
