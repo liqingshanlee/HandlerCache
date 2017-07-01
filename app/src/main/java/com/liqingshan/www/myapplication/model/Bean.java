@@ -1,4 +1,4 @@
-package com.liqingshan.www.myapplication;
+package com.liqingshan.www.myapplication.model;
 
 /**
  * 作者： 李青山

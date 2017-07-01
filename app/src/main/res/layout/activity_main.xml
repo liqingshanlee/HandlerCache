@@ -4,53 +4,73 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.liqingshan.www.myapplication.MainActivity">
+    tools:context="com.liqingshan.www.myapplication.ui.MainActivity">
 
-    <Button
-        android:id="@+id/start"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:text="开始启动" />
-
-    <ProgressBar
-        android:id="@+id/progress_bar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="10dip"
-        android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/textview2"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="70dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="更新界面UI"
-        android:textColor="@android:color/white" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/textview3"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_marginTop="130dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="跳转到下一页"
-        android:textColor="@android:color/white" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textview1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
-        android:text="测试"
-        android:textColor="@color/colorPrimary"
-        android:textSize="20sp" />
+            <Button
+                android:id="@+id/start"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview2"
+                android:layout_marginTop="20dp"
+                android:text="开始启动handler" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="10dip"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="70dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="更新界面UI"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/start"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="跳转到下一页"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textview3"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="调转到缓存操作界面"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="测试"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

@@ -1,4 +1,4 @@
-package com.liqingshan.www.myapplication;
+package com.liqingshan.www.myapplication.ui;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -10,10 +10,13 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.liqingshan.www.myapplication.model.Bean;
+import com.liqingshan.www.myapplication.R;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button mButton;
     private ProgressBar mProgressbar;
-    private TextView mTextView, mTextView1, textview3;
+    private TextView mTextView, mTextView1, textview3, textView4;
     private Bean mBean = new Bean();
     int i = 0;
     int timer = 0;
@@ -29,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTextView = (TextView) findViewById(R.id.textview1);
         mTextView1 = (TextView) findViewById(R.id.textview2);
         textview3 = (TextView) findViewById(R.id.textview3);
+        textView4 = (TextView) findViewById(R.id.textview4);
         textview3.setOnClickListener(this);
         mTextView1.setOnClickListener(this);
         mButton.setOnClickListener(this);
@@ -46,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.textview3:
                 startActivity(new Intent(MainActivity.this, SecondActivity.class));
+                break;
+            case R.id.textview4:
+                startActivity(new Intent(MainActivity.this,CacheMathActivity.class));
                 break;
         }
 

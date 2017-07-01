@@ -28,7 +28,6 @@ android {
         flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
     }
 
-
     //定义signingConfig.release 添加我们的签名文件配置
     signingConfigs {
         debug {}
@@ -75,5 +74,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }

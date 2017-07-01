@@ -1,12 +1,13 @@
-package com.liqingshan.www.myapplication;
+package com.liqingshan.www.myapplication.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.liqingshan.www.myapplication.R;
 
 public class SecondActivity extends AppCompatActivity {
     View layoutMain = null;
