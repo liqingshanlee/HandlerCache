@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textview3.setOnClickListener(this);
         mTextView1.setOnClickListener(this);
         mButton.setOnClickListener(this);
+        textView4.setOnClickListener(this);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, SecondActivity.class));
                 break;
             case R.id.textview4:
-                startActivity(new Intent(MainActivity.this,CacheMathActivity.class));
+                startActivity(new Intent(MainActivity.this, CacheMathActivity.class));
                 break;
         }
 

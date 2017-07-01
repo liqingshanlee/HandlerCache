@@ -13,6 +13,10 @@ import java.math.BigDecimal;
  */
 
 public class DataCleanManager {
+    //项目中碰到了计算缓存大小和清空缓存的功能，这个很常见的功能，几乎每个APP都有，以为实现很简单，
+    // 网上搜了一大堆，发现都不是符合我需要的，而且经常删除的没有效果，于是又另外找了一些资料，
+    // 折腾了蛮久，终于完成了。以下的这个类的功能很简单，计算你的缓存总大小，
+    // 不管内部缓存还是外部缓存，和清空缓存，包括内部和外部的缓存一起清空：
     public static String getTotalCacheSize(Context context) throws Exception {
         long cacheSize = getFolderSize(context.getCacheDir());
         if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
