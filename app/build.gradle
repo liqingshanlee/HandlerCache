@@ -39,7 +39,7 @@ android {
          */
         release {
             //签名文件地址，打包者修改为自己的文件地址
-            storeFile file("F:\\android_dome\\liqingshan.jks")
+//            storeFile file("F:\\android_dome\\liqingshan.jks")
             storePassword "lqs123456"
             keyAlias "liqingshan"
             keyPassword "lqs123456"
